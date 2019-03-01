@@ -1,5 +1,6 @@
 stage('build') {
     node {
+        echo env.REPO_URL
         git([url: env.REPO_URL, branch: env.BRANCH])
         sh 'ls'
         // clean()
