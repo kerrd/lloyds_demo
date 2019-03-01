@@ -3,17 +3,7 @@ node {
     checkout scm
     stage "Create build output"
 
-    echo "env.BRANCH_NAME = ${env.BRANCH_NAME}"
-
-    if (env.BRANCH_NAME != 'master') {
-        echo 'Not master'
-    } else {
-        echo 'Master'
-    }
-
-    def branchName = getCurrentBranch()
-    echo 'My branch is' + branchName
-    println "${BRANCH_NAME}"
+    echo 'Pulling... ' + env.GIT_BRANCH
 }
 
 def getCurrentBranch () {
