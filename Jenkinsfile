@@ -3,9 +3,11 @@ node {
     checkout scm
     stage "Create build output"
 
-    if (env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'staging') {
-        echo 'This is not master or staging'
+    echo "env.BRANCH_NAME = ${env.BRANCH_NAME}"
+
+    if (env.BRANCH_NAME != 'master' {
+        echo 'Not master'
     } else {
-        echo 'things and stuff'
+        echo 'Master'
     }
 }
