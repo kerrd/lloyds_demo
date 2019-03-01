@@ -13,6 +13,7 @@ node {
 
     def branchName = getCurrentBranch()
     echo 'My branch is' + branchName
+    println "${BRANCH_NAME}"
 }
 
 def getCurrentBranch () {
