@@ -1,3 +1,3 @@
 node {
- echo "${env.getEnvironment()}"
+ echo "${env.BUILD_NUMBER}"
 }
