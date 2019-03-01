@@ -2,9 +2,6 @@
 node {
     checkout scm
     stage "Create build output"
-    
-    // Make the output directory.
-    sh 'ls'
 
     if (env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'staging') {
         echo 'This is not master or staging'
