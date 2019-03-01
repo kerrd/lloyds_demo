@@ -1,12 +1,10 @@
 stage('build') {
-    parallel real_linux: {
-        node('docker') {
-            git([url: env.REPO_URL, branch: env.BRANCH])
-            // clean()
-            // build_safe_client_libs('real')
-            // strip_build_artifacts()
-            // package_build_artifacts('real', 'linux')
-            // upload_build_artifacts()
-        }
+    node {
+        git([url: env.REPO_URL, branch: env.BRANCH])
+        // clean()
+        // build_safe_client_libs('real')
+        // strip_build_artifacts()
+        // package_build_artifacts('real', 'linux')
+        // upload_build_artifacts()
     }
 }
