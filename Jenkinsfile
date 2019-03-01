@@ -1,12 +1,8 @@
 // This shows a simple example of how to archive the build output artifacts.
 node {
-    echo 'Pulling... ' + env.GIT_BRANCH
-    echo env.BRANCH_NAME
+    //checkout scm
+    stage "Build docker image"
+
+    docker build -t nginx .
 }
 
-def getCurrentBranch () {
-    return sh (
-        script: 'git rev-parse --abbrev-ref HEAD',
-        returnStdout: true
-    ).trim()
-}
