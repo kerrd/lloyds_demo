@@ -1,6 +1,6 @@
 // This shows a simple example of how to archive the build output artifacts.
 node {
-    echo env
+    echo 'Pulling... ' + env.GIT_BRANCH
 }
 
 def getCurrentBranch () {
