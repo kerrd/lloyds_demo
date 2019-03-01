@@ -1,10 +1,7 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Stage 1') {
-            steps {
-                echo 'Hello world!' 
-            }
-        }
-    }
+// This shows a simple example of how to archive the build output artifacts.
+node {
+    stage "Create build output"
+    
+    // Make the output directory.
+    sh "Hello World"
 }
