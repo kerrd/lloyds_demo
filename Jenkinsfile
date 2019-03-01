@@ -5,7 +5,7 @@ node {
 
     echo "env.BRANCH_NAME = ${env.BRANCH_NAME}"
 
-    if (env.BRANCH_NAME != 'master' {
+    if (env.BRANCH_NAME != 'master') {
         echo 'Not master'
     } else {
         echo 'Master'
